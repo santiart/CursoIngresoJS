@@ -4,13 +4,13 @@ var nota;
 nota=Math.floor((Math.random()*10)+1);
 nota=parseInt(nota);
 if(nota>=9){
-	alert(nota +"excelente");
-}
-else if((nota>=4)&&(nota<9)){
-	alert(nota + "aprobó");
+	alert(nota +"  excelente");
 }
 else{
-	alert(nota + "vamos, la próxima se puede");
+	alert(nota + "  aprobo");
+}
+if(nota<4){
+	alert(nota+"  vamos, la proxima se puede");
 }
 }
 //FIN DE LA FUNCIÓN
