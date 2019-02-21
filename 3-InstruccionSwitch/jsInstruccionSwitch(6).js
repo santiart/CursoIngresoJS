@@ -1,6 +1,6 @@
 function mostrar()
 {
-//tomo la edad  
+//tomo la edad
 var laHora = document.getElementById('hora').value;
 switch(laHora){
     case "7":
@@ -22,7 +22,7 @@ switch(laHora){
         alert("es de tarde");
         break;
     }
-    case "20": 
+    case "20":
     case "21":
     case "22":
     case "23":
