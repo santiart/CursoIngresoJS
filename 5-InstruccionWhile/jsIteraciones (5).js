@@ -1,12 +1,10 @@
-function mostrar()
-{
+function mostrar() {
 
-var sexo = prompt("ingrese f ó m .");
-while((sexo="f")||(sexo="m")){
-    alert("la respuesta es incorrecta");
-    sexo=prompt("ingrese f o m");
-}
-alert("su sexo es: ")
-document.getElementById('Sexo').value=sexo
+    var sexo = prompt("ingrese f ó m .").toLocaleLowerCase();
+    while (!(sexo == "f" ||sexo == "m")) {
+        sexo = prompt("error; ingrese f o m").toLocaleLowerCase();
+    }
+
+    document.getElementById('Sexo').value = sexo;
 
 }//FIN DE LA FUNCIÓN
