@@ -12,11 +12,11 @@ function mostrar()
 		while(isNaN(numero)){
 			numero=parseInt(prompt("error!,el numero que ha ingresado es incorrecto, por favor ingrese nuevamente un numero"));
 		}
-		if (numero>0){
-			positivo=positivo+numero;
+		if (numero>=0){
+			positivo+=numero;
 		}
 		else{
-			negativo=negativo*numero;
+			negativo*=numero;
 			contadorn++;
 		}
 		contador++;
@@ -25,9 +25,6 @@ function mostrar()
 		}
 		respuesta=confirm("¿desea ingresar otro numero?");
 	}while(respuesta==true)
-
-
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
-document.getElementById("contador").value=contador;
+document.getElementById("suma").value=positivo;
+document.getElementById("producto").value=negativo;
 }//FIN DE LA FUNCIÓN

@@ -1,5 +1,5 @@
 function mostrar()
-/*
+
 { var ancho;
     ancho=prompt("ingrese el ancho");
     ancho=parseInt(ancho);
@@ -10,7 +10,7 @@ function mostrar()
  perimetro= 2* (largo + ancho),
  alert("el resultado del perimetro es:"+ perimetro);
 }
-*/
+/*
 {
     var nombre1;
     nombre1=prompt("ingrese el nombre de su mascota");
@@ -25,4 +25,4 @@ function mostrar()
     var suma;
     suma= peso1 + peso2;
     alert("tenes dos mascotas"+nombre1+"  y  "+ nombre2+" , que pesan"+ peso1 +"  y  "+ peso2 +",la suma de de los kilos es" +suma);
-}
+}*/

@@ -1,12 +1,12 @@
 function mostrar()
-{/*
+{
     var nombre;
     nombre=document.getElementById("elNombre").value;
     var localidad;
     localidad=document.getElementById("laLocalidad").value;
     alert(" su nombre es:"+nombre+  " y su localidad es:"+localidad)
 }
-*/
+/*
 {
     var compra;
     compra=document.getElementById("FormIngreso").value;
@@ -16,7 +16,4 @@ function mostrar()
     descuento=parseInt(descuento);
     var cuenta;
     cuenta= compra * 0.1
-
-
-
-}
+}*/
