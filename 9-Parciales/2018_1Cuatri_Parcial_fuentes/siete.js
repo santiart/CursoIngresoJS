@@ -1,7 +1,8 @@
 function mostrar()
+
 {
-  var numero;
-  var nota;
+  var acumulador=0;
+  var nota=0;
   var sexo;
   var contador=0;
   var promnotas=0;
@@ -10,35 +11,36 @@ function mostrar()
   var nmin;
   var nmax;
   var bandera=true;
-
-    while(contador>5){
-      nota=parseInt(prompt("ingrese la calificacion"));
-      contador++
-    do{
-      while(isNaN(nota)){
-      nota=parseInt(prompt("error, ingrese la calificacion"));
+  while(contador<5){
+    nota=parseInt(prompt("ingrese la calificacion"));
+    while(isNaN(nota)){
+      nota=parseInt(prompt("error, ingrese nuevamente la calificacion"));
     }
-    sexo=parseInt(prompt("ingrese f o m").toLocaleLowerCase());
-    while(!(sexo =="F"||sexo=="M")){
-      sexo=parseInt(prompt("error, ingrese f o m").toLocaleLowerCase());
+    sexo=prompt("ingrese f o m").toLocaleLowerCase();
+    while((sexo =="f")&&(sexo=="m")){
+      sexo=prompt("error, ingrese f o m").toLocaleLowerCase();
     }
-    if(nota<0||nota>10){
-      sumanotas+=nota;
-      cantnotas++
-    }
-    if(bandera){
-      nmax=nota;
-      nmin=nota;
-    }
-    else{
-      if(nota>nmax){
+    acumulador+=nota;
+    contador++;
+  } 
+      if(nota<0||nota>10){
+        sumanotas+=nota;
+        cantnotas++
+      }
+      if(bandera){
         nmax=nota;
+        nmin=nota;
       }
       else{
-       nmin=nota;
+        if(nota>nmax){
+          nmax=nota;
+        }
+        else{
+          nmin=nota;
+        }
       }
-    }
-    promnotas=sumanotas/cantnotas;
-    document.write("el promedio de las notas es: "+promnotas);
-  }
+      promnotas=sumanotas/cantnotas;
+      document.write("el promedio de las notas es: "+promnotas);
+    
 }
+
