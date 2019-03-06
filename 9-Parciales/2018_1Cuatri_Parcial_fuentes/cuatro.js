@@ -1,4 +1,5 @@
 function mostrar()
+/*
 {
   var tarjeta;
   tarjeta=parseInt(prompt("ingrese si el pago se hara con tarjeta"));
@@ -23,5 +24,26 @@ function mostrar()
   else if (precio>=2000){
         preciodesc= precio * 0.85;
         alert("el precio con descuento es de:" + preciodesc);
+    }
+  }
+  */
+
+
+  {
+    var num1=parseInt(prompt("ingrese un nnumero"));
+    var num2=parseInt(prompt("ingrese otro numero"));
+    var resta=num1-num2;
+    var suma=num1+num2;
+    if(num1==num2){
+      alert(num1,num2);
+    }
+    if(num1>num2){
+      alert(resta);
+    }
+    else{
+      alert(suma);
+    }
+    if(suma>10){
+      alert("la suma es "+suma+ " y supero el numero 10");
     }
   }
