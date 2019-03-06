@@ -13,6 +13,6 @@ function SacarResto()
     divisor= document.getElementById("numeroDivisor").value;
     divisor=parseInt(divisor);
     var  resto;
-     resto= dividendo % divisor;
-    alert(resto);	
+     resto= dividendo / divisor;
+    alert("el resultado de la division es: "+resto);	
 }

@@ -1,46 +1,47 @@
 function mostrar()
 
 {
-  var acumulador=0;
-  var nota=0;
-  var sexo;
   var contador=0;
+  var nota=0;
+  var notai=0;
+  var nota6=0;
+  var notamin=0;
+  var sexo;
+  var sexonotam=0;
   var promnotas=0;
-  var cantnotas=0;
-  var sumanotas=0;
-  var nmin;
-  var nmax;
   var bandera=true;
   while(contador<5){
-    nota=parseInt(prompt("ingrese la calificacion"));
-    while(isNaN(nota)){
-      nota=parseInt(prompt("error, ingrese nuevamente la calificacion"));
+    notai=parseInt(prompt("ingrese la calificacion"));
+    while(notai>10||notai<0||isNaN(notai)){
+      notai=parseInt(prompt("error, ingrese nuevamente la calificacion"));
     }
-    sexo=prompt("ingrese f o m").toLocaleLowerCase();
-    while((sexo =="f")&&(sexo=="m")){
-      sexo=prompt("error, ingrese f o m").toLocaleLowerCase();
+    nota=nota+notai;
+    sexo=prompt("ingrese f o m");
+    while(sexo!="f"&&sexo!="m"){
+      sexo=prompt("sexo invalido, ingrese el sexo nuevamente");
     }
-    acumulador+=nota;
+    if(bandera){
+      bandera=false;
+      notamin=notai;
+    }
+    else{
+      if(notamin>notai){
+        notamin=notai;
+      }
+    }
+    if(notamin==notai&&sexo=="f"){
+      sexonotam=sexo;
+    }
+    if(notamin==notai&&sexo=="m"){
+      sexonotam=sexo;
+    }
+    if(notai>=6&&sexo=="m"){
+      nota6++;
+    }
     contador++;
-  } 
-      if(nota<0||nota>10){
-        sumanotas+=nota;
-        cantnotas++
-      }
-      if(bandera){
-        nmax=nota;
-        nmin=nota;
-      }
-      else{
-        if(nota>nmax){
-          nmax=nota;
-        }
-        else{
-          nmin=nota;
-        }
-      }
-      promnotas=sumanotas/cantnotas;
-      document.write("el promedio de las notas es: "+promnotas);
-    
+  }
+  promnotas=nota/contador;
+  alert("el promedio de las notas es: "+ promnotas);
+  alert(nota6 + "varones tienen una calificaion de 6 o mas");
+  alert("la nota mas baja es " + notamin + "y su sexo es " + sexonotam);
 }
-

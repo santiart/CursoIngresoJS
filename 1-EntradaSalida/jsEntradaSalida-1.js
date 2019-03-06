@@ -2,13 +2,12 @@
 function mostrar()
 /*
 {
-	alert("hola");
-	var texto = prompt ("ingrese mensaje");
+	alert("esto funciona de maravilla");
+	
 }
 */
 
 {
-	alert("Esto funciona de maravilla");
 
 	var a;
 	var b;
