@@ -8,79 +8,29 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó.
 */
 function CalcularPrecio ()
-{
-  /*
-var cantlamparas;
-    cantlamparas=document.getElementById("Cantidad").value;
-    cantlamparas=parseInt(cantlamparas);
-    if(cantlamparas>=6){
-        document.getElementById("precioDescuento").value=((cantlamparas*35)*0.5);
-   }
-   else{
-    document.getElementById("precioDescuento").value=((cantlamparas*35)*0.5);
-      if
-     if((cantlamparas==4)&&(document.getElementById("Marca").value=="ArgentinaLuz"||"FelipeLamparas")){
-       document.getElementById("precioDescuento").value=((cantlamparas*35)*0.75);
-     }
-     else{
-       document.getElementById("precioDescuento").value=((cantlamparas*35)*0.8);
-     }
-   }
-}
-*/
 
-  var cantlamparas;
-  cantlamparas=document.getElementById("Cantidad").value;
-  cantlamparas=parseInt(cantlamparas);
-  var marca;
-  marca=document.getElementById("Marca").value;
+{
+  var cantlamparas=parseInt(document.getElementById("Cantidad").value);
   var precio=35;
   var descuento;
-  switch(cantlamparas){
-    case 6:{
-      descuento=0.5;
-      break;
+  if(cantlamparas>=6){
+    descuento=0.5;
+    document.getElementById("precioDescuento").value=((cantlamparas*precio)*descuento);
+  }
+  else{
+    if((cantlamparas==5)&&(document.getElementById("Marca").value=="ArgentinaLuz")){
+      descuento=0.6;
+      document.getElementById("precioDescuento").value=((cantlamparas*precio)*descuento);
     }
-    case 5:{
-      switch(marca){
-        case "ArgentinaLuz":{
-          descuento=0.6;
-          break;
-        }
-        default:{
-          descuento=0.7;
-        }
-      }
-    }
-    case 4:{
-      switch(marca){
-        case "ArgentinaLuz":
-        case "FelipeLamparas":{
-          descuento=0.75;
-          break;
-        }
-        default:{
-          descuento=0.8;
-          break;
-        }
-      }
-    }
-    case 3:{
-      switch(marca){
-        case "ArgentinaLuz":{
-          descuento=0.85;
-          break;
-        }
-        case "FelipeLamparas":{
-          descuento=0.9;
-          break;
-        }
-        default:{
-          descuento=0.95;
-          break;
-        }
-      }
+    else{
+      descuento=0.7;
+      document.getElementById("precioDescuento").value=((cantlamparas*precio)*descuento);
     }
   }
-  document.getElementById("precioDescuento").value=((cantlamparas*precio)*descuento);
+  if((cantlamparas==4)&&(document.getElementById("Marca").value=="ArgentinaLuz"||"FelipeLamparas")){
+    document.getElementById("precioDescuento").value=((cantlam))
+  }
+  else{
+
+  }
 }
